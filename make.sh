@@ -1,7 +1,7 @@
 #!/bin/bash
 
-avr-gcc -w -Os -DF_CPU=16000000UL -mmcu=atmega32 -std=c99 -c -o main.o main.c
-avr-gcc -w -mmcu=atmega32 main.o -o main
-avr-objcopy -O ihex -R .eeprom main main.hex
+avr-gcc -Wall -Os -mmcu=atmega32 -std=c99  main.c init_setup.c user_interface.c -o main.o
+#avr-gcc -w -mmcu=atmega32 main.o -o main
+avr-objcopy -O ihex -R .eeprom main.o main.hex
 
 

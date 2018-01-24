@@ -1,0 +1,11 @@
+ATmega32 16 step midi sequencer 
+
+Features :
+1. 16 steps displayed on 16 leds
+2. Alphanumeric LCD 
+3. Tempo between 10 and 250 bpm
+4. 4 x Play modes: Forward, Backward, Pendule, Random
+5. Adjustable number of steps between 1 and 16
+6. Adjustable length of note (default 1/16)
+7. Adjustable note pitch, velocity and skip 
+8. Set midi note by midi (using midi keyboard)

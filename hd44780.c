@@ -503,10 +503,8 @@ Returns:  none
 *************************************************************************/
 void lcd_setCursor(uint8_t row, uint8_t col)
   {
-	uint8_t pos;
-	if(row == 0)pos = col;
-	else if(row == 1)pos = col + 0x40;  
-    lcd_command((1<<LCD_DDRAM)+pos);
+	if(row == 0)lcd_command((1<<LCD_DDRAM)+col);
+	else if(row == 1)lcd_command((1<<LCD_DDRAM)+(col + 0x40));    
   }
 
 /*************************************************************************
